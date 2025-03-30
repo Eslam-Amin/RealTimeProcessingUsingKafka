@@ -1,0 +1,12 @@
+{
+  "name": "user-activity",
+  "version": "1.0.0",
+  "description": "a scalable event-driven microservice using Node.js and Kafka for real-time processing.",
+  "license": "ISC",
+  "author": "Eslam Amin",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
