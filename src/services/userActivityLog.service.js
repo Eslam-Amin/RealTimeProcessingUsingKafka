@@ -3,7 +3,7 @@ class UserActivityLogsService {
   async getUserActivityLogs({ query, page, perPage }) {
     const userActivityLogs = await ActivityLog.find(query)
       .collation({ locale: "en", strength: 2 })
-      .sort({ timestamp: -1 })
+      .sort({ createdAt: -1 })
       .skip((page - 1) * perPage)
       .limit(perPage);
     const totalDocsCount = await ActivityLog.countDocuments(query).collation({
