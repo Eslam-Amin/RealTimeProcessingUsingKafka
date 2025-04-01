@@ -72,6 +72,8 @@ To deploy the microservice using Kubernetes, apply the manifests:
 kubectl apply -f k8s/
 ```
 
+you can view the postman collection through this link https://documenter.getpostman.com/view/23525113/2sB2cRCjJU 
+
 ## Conclusion
 This project demonstrates **real-time event-driven logging** with Kafka, Node.js, and MongoDB. It also includes **fake endpoints** to generate and test log functionality. 🚀
 
