@@ -6,7 +6,10 @@ class UserActivityLogsService {
       .sort({ timestamp: -1 })
       .skip((page - 1) * perPage)
       .limit(perPage);
-    const totalDocsCount = await ActivityLog.countDocuments(query);
+    const totalDocsCount = await ActivityLog.countDocuments(query).collation({
+      locale: "en",
+      strength: 2
+    });
     // Pagination
     const pagination = {};
     pagination.totalResults = totalDocsCount;
