@@ -14,12 +14,10 @@ app.use("/api/user-activity-logs", userActivityLogsRoutes);
 app.use("/api/fake", fakeUserRoutes);
 // Not Found Route
 app.all("*", (req, res, next) => {
-  res
-    .status(404)
-    .json({
-      message: `This Route (${req.originalUrl}) is not found`,
-      success: false
-    });
+  res.status(404).json({
+    message: `This Route (${req.originalUrl}) is not found`,
+    success: false
+  });
 });
 
 // Start Kafka Consumer
